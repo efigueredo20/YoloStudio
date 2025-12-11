@@ -1,0 +1,99 @@
+@import '../../styles/mixins.module.scss';
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.sectionDesc {
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.uploadArea {
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    background: var(--color-white);
+
+    &:hover {
+        border-color: var(--color-primary-accent);
+        background: rgba(204, 255, 0, 0.05);
+    }
+
+    .icon {
+        margin-bottom: 1rem;
+        color: var(--color-black);
+    }
+
+    p {
+        font-weight: 500;
+    }
+}
+
+.splitSection {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    h3 {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Slider CSS would go here or in a separate component, 
+   for simplicity doing a basic styled range input if not using a library */
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.sliderTrack {
+    width: 100%;
+    height: 8px;
+    background: #E5E7EB;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliderFill {
+    height: 100%;
+    background: var(--color-success);
+    transition: width 0.1s linear;
+}
+
+.sliderInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.sliderLabel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
